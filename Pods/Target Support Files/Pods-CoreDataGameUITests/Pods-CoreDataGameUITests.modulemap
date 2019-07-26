@@ -1,0 +1,6 @@
+framework module Pods_CoreDataGameUITests {
+  umbrella header "Pods-CoreDataGameUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
