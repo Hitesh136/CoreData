@@ -31,6 +31,7 @@ class ProductViewController: UIViewController {
         product.name = nameTextField.text
         product.price = Int16(priceTextField.text ?? "") ?? 0
         product.setDefaultDetail()
+        product.id =  Int16.random(in: 0...1000)
         do {
             try appDelegate.persistentContainer.viewContext.save()
             print("Product saved in Database.")

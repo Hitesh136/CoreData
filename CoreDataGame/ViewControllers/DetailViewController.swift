@@ -12,23 +12,56 @@ import CoreData
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    var productId: Int16 = 0
     var field: [Detail] = []
-    
+    var tempContext: NSManagedObjectContext? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tempContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        tempContext?.automaticallyMergesChangesFromParent = true
+        tempContext?.parent = appDelegate.persistentContainer.viewContext
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.reloadData()
+        
+        fetchFields()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     @IBAction func actionSave(_ sender: Any) {
-        appDelegate.saveContext()
+        
+        do {
+            try self.tempContext?.save()
+        }
+        catch let error {
+            print(error.localizedDescription)
+        }
+        
+        appDelegate.saveContext() 
         navigationController?.popViewController(animated: true)
+    }
+    
+    func fetchFields() {
+        
+        let fetchrequest: NSFetchRequest<Product> = NSFetchRequest(entityName: "Product")
+        let predicate = NSPredicate(format: "id == \(productId)")
+        fetchrequest.predicate = predicate
+        
+        let sortDescripter = NSSortDescriptor(key: "price", ascending: true)
+        fetchrequest.sortDescriptors = [sortDescripter]
+        do {
+            if let product = try tempContext?.fetch(fetchrequest).first, let detailSet = product.detail, let fieldArr = Array(detailSet) as? [Detail] {
+                self.field = fieldArr
+                self.tableView.reloadData()
+                
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
 

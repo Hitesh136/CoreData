@@ -78,7 +78,7 @@ extension ViewController: UITableViewDelegate {
         let product = products[indexPath.row]
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             
-            detailViewController.field = Array(product.detail ?? []) as! [Detail]
+            detailViewController.productId = product.id
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
         
