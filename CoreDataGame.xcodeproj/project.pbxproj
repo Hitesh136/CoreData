@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A0B063422EB261B00B19FE0 /* Product+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B063322EB261B00B19FE0 /* Product+Helper.swift */; };
 		4A4FA3CA22EAD988000CD918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3C922EAD988000CD918 /* AppDelegate.swift */; };
 		4A4FA3CC22EAD988000CD918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3CB22EAD988000CD918 /* ViewController.swift */; };
 		4A4FA3CF22EAD988000CD918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4FA3CD22EAD988000CD918 /* Main.storyboard */; };
@@ -16,11 +15,13 @@
 		4A4FA3D722EAD98A000CD918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4FA3D522EAD98A000CD918 /* LaunchScreen.storyboard */; };
 		4A4FA3E222EAD98A000CD918 /* CoreDataGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3E122EAD98A000CD918 /* CoreDataGameTests.swift */; };
 		4A4FA3ED22EAD98A000CD918 /* CoreDataGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3EC22EAD98A000CD918 /* CoreDataGameUITests.swift */; };
-		4A4FA3FB22EADC34000CD918 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FA22EADC34000CD918 /* ProductTableViewCell.swift */; };
-		4A4FA3FD22EADF56000CD918 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FC22EADF56000CD918 /* ProductViewController.swift */; };
+		4A4FA3FB22EADC34000CD918 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FA22EADC34000CD918 /* UserTableViewCell.swift */; };
+		4A4FA3FD22EADF56000CD918 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FC22EADF56000CD918 /* UserViewController.swift */; };
 		4A4FA3FF22EAE0FE000CD918 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FE22EAE0FE000CD918 /* Constants.swift */; };
 		4AC103A922EB08060005C829 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC103A822EB08060005C829 /* DetailViewController.swift */; };
 		4AC103AD22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC103AC22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift */; };
+		9D9DEB5123099C3A0091595B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9DEB4F23099C3A0091595B /* User+CoreDataProperties.swift */; };
+		9D9DEB5223099C3A0091595B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9DEB5023099C3A0091595B /* User+CoreDataClass.swift */; };
 		A03A042B864FEF882F564CD6 /* Pods_CoreDataGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B3DAB9CE07C579FA58CF2D /* Pods_CoreDataGame.framework */; };
 		ACA8AD04AE7ECC8E11E9A9CC /* Pods_CoreDataGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47E070D1B353ECFAA16F737 /* Pods_CoreDataGameTests.framework */; };
 		C0E2D5A0C77345883CF64A82 /* Pods_CoreDataGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 785BE56358BA126999CC7AF9 /* Pods_CoreDataGameUITests.framework */; };
@@ -46,7 +47,6 @@
 /* Begin PBXFileReference section */
 		1D5FC02BC65C4BFBE97B58D8 /* Pods-CoreDataGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataGameUITests/Pods-CoreDataGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F122852AE3211E814D3E20B /* Pods-CoreDataGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataGame/Pods-CoreDataGame.debug.xcconfig"; sourceTree = "<group>"; };
-		4A0B063322EB261B00B19FE0 /* Product+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Helper.swift"; sourceTree = "<group>"; };
 		4A4FA3C622EAD988000CD918 /* CoreDataGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4FA3C922EAD988000CD918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A4FA3CB22EAD988000CD918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 		4A4FA3E822EAD98A000CD918 /* CoreDataGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4FA3EC22EAD98A000CD918 /* CoreDataGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataGameUITests.swift; sourceTree = "<group>"; };
 		4A4FA3EE22EAD98A000CD918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A4FA3FA22EADC34000CD918 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
-		4A4FA3FC22EADF56000CD918 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		4A4FA3FA22EADC34000CD918 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		4A4FA3FC22EADF56000CD918 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		4A4FA3FE22EAE0FE000CD918 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4AC103A822EB08060005C829 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AC103AC22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextFieldTableVIewCell.swift; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		785BE56358BA126999CC7AF9 /* Pods_CoreDataGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		893244FF76638E51C6FF0BD3 /* Pods-CoreDataGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataGameUITests/Pods-CoreDataGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		92B8AEA829654A2CBBE299D9 /* Pods-CoreDataGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataGameTests/Pods-CoreDataGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D9DEB4F23099C3A0091595B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9D9DEB5023099C3A0091595B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A47E070D1B353ECFAA16F737 /* Pods_CoreDataGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CB93D18136D471D289740F /* Pods-CoreDataGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataGameTests/Pods-CoreDataGameTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4B3DAB9CE07C579FA58CF2D /* Pods_CoreDataGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +131,8 @@
 		4A0B063222EB260C00B19FE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4A0B063322EB261B00B19FE0 /* Product+Helper.swift */,
+				9D9DEB5023099C3A0091595B /* User+CoreDataClass.swift */,
+				9D9DEB4F23099C3A0091595B /* User+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,7 +199,7 @@
 			children = (
 				4AC103A822EB08060005C829 /* DetailViewController.swift */,
 				4A4FA3CB22EAD988000CD918 /* ViewController.swift */,
-				4A4FA3FC22EADF56000CD918 /* ProductViewController.swift */,
+				4A4FA3FC22EADF56000CD918 /* UserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -212,7 +215,7 @@
 		4AC103AB22EB09C70005C829 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				4A4FA3FA22EADC34000CD918 /* ProductTableViewCell.swift */,
+				4A4FA3FA22EADC34000CD918 /* UserTableViewCell.swift */,
 				4AC103AC22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift */,
 			);
 			path = TableViewCells;
@@ -439,14 +442,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4FA3FB22EADC34000CD918 /* ProductTableViewCell.swift in Sources */,
+				4A4FA3FB22EADC34000CD918 /* UserTableViewCell.swift in Sources */,
 				4A4FA3FF22EAE0FE000CD918 /* Constants.swift in Sources */,
 				4A4FA3CC22EAD988000CD918 /* ViewController.swift in Sources */,
 				4A4FA3D222EAD988000CD918 /* CoreDataGame.xcdatamodeld in Sources */,
 				4A4FA3CA22EAD988000CD918 /* AppDelegate.swift in Sources */,
-				4A0B063422EB261B00B19FE0 /* Product+Helper.swift in Sources */,
-				4A4FA3FD22EADF56000CD918 /* ProductViewController.swift in Sources */,
+				4A4FA3FD22EADF56000CD918 /* UserViewController.swift in Sources */,
 				4AC103A922EB08060005C829 /* DetailViewController.swift in Sources */,
+				9D9DEB5223099C3A0091595B /* User+CoreDataClass.swift in Sources */,
+				9D9DEB5123099C3A0091595B /* User+CoreDataProperties.swift in Sources */,
 				4AC103AD22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

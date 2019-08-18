@@ -9,10 +9,9 @@
 import UIKit
 import CoreData
 
-class ProductTableViewCell: UITableViewCell {
+class UserTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
@@ -20,8 +19,9 @@ class ProductTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func configureCell(product: Product) {
-        nameLabel.text = product.name
-        priceLabel.text = String(product.price)
+    func configureCell(user: User) {
+        fullNameLabel.text = user.name
+        
+        priceLabel.text = String(user.age)
     } 
 }

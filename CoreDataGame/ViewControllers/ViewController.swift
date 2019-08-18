@@ -12,7 +12,7 @@ import CoreData
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var products: [Product] = [] {
+    var users: [User] = [] {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
@@ -26,41 +26,41 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchProducts()
+        fetchUsers()
     }
 
-    func delete(product: Product) {
-        appDelegate.persistentContainer.viewContext.delete(product)
+    func delete(user: User) {
+        appDelegate.persistentContainer.viewContext.delete(user)
         try? appDelegate.persistentContainer.viewContext.save()
     }
     
-    func fetchProducts() {
-        let fetchRequest: NSFetchRequest<Product> = NSFetchRequest(entityName: "Product")
+    func fetchUsers() {
+        let fetchRequest: NSFetchRequest<User> = NSFetchRequest(entityName: "User")
         do {
-            products = try appDelegate.persistentContainer.viewContext.fetch(fetchRequest)
+            users = try appDelegate.persistentContainer.viewContext.fetch(fetchRequest)
         } catch let error {
             print("Fetch Failed: \(error)")
         }
     }
     
     @IBAction func actionAdd() {
-        if let productViewController = storyboard?.instantiateViewController(withIdentifier: "ProductViewController") as? ProductViewController {
-            self.navigationController?.pushViewController(productViewController, animated: true)
+        if let userViewController = storyboard?.instantiateViewController(withIdentifier: "UserViewController") as? UserViewController {
+            self.navigationController?.pushViewController(userViewController, animated: true)
         }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? ProductTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? UserTableViewCell else {
             return UITableViewCell()
         }
         
-        cell.configureCell(product: products[indexPath.row])
+        cell.configureCell(user: users[indexPath.row])
         return cell
     }
 }
@@ -69,16 +69,16 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            delete(product: products[indexPath.row])
-            fetchProducts()
+            delete(user: users[indexPath.row])
+            fetchUsers()
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let product = products[indexPath.row]
+        let user = users[indexPath.row]
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             
-            detailViewController.productId = product.id
+            detailViewController.userId = user.id
             self.navigationController?.pushViewController(detailViewController, animated: true)
         }
         

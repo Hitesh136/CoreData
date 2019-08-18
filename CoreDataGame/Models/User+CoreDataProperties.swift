@@ -1,14 +1,39 @@
 //
-//  Product+Helper.swift
-//  CoreDataGame
+//  User+CoreDataProperties.swift
 //
-//  Created by Hitesh Agarwal on 26/07/19.
-//  Copyright © 2019 Finoit Technologies. All rights reserved.
+//
+//  Created by Hitesh  Agarwal on 18/08/19.
+//
 //
 
 import Foundation
+import CoreData
 
-extension Product {
+
+extension User {
+    
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
+        return NSFetchRequest<User>(entityName: "User")
+    }
+    
+    @NSManaged public var age: Int16
+    @NSManaged public var firstName: String?
+    @NSManaged public var id: Int16
+    @NSManaged public var lastName: String?
+    var name: String? {
+        var name = ""
+        if let firstName = firstName {
+            name += firstName
+        }
+        
+        if let lastName = lastName {
+            name += " " + lastName
+        }
+        return name
+    }
+    @NSManaged public var detail: NSOrderedSet?
+    
+    
     func setDefaultDetail() {
         let context = appDelegate.persistentContainer.viewContext
         let d1 = Detail(context: context)
@@ -36,6 +61,7 @@ extension Product {
         let d12 = Detail(context: context)
         d12.name = "twelve"
         
-        detail = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12] 
+        detail = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12]
     }
 }
+

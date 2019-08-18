@@ -12,7 +12,7 @@ import CoreData
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var productId: Int16 = 0
+    var userId: Int16?
     var field: [Detail] = []
     var tempContext: NSManagedObjectContext? = nil
     override func viewDidLoad() {
@@ -47,14 +47,14 @@ class DetailViewController: UIViewController {
     
     func fetchFields() {
         
-        let fetchrequest: NSFetchRequest<Product> = NSFetchRequest(entityName: "Product")
-        let predicate = NSPredicate(format: "id == \(productId)")
+        let fetchrequest: NSFetchRequest<User> = NSFetchRequest(entityName: "User")
+        let predicate = NSPredicate(format: "id == \(userId)")
         fetchrequest.predicate = predicate
         
         let sortDescripter = NSSortDescriptor(key: "price", ascending: true)
         fetchrequest.sortDescriptors = [sortDescripter]
         do {
-            if let product = try tempContext?.fetch(fetchrequest).first, let detailSet = product.detail, let fieldArr = Array(detailSet) as? [Detail] {
+            if let user = try tempContext?.fetch(fetchrequest).first, let detailSet = user.detail, let fieldArr = Array(detailSet) as? [Detail] {
                 self.field = fieldArr
                 self.tableView.reloadData()
                 

@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 
-class ProductViewController: UIViewController {
+class UserViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     
     override func viewDidLoad() {
@@ -19,22 +20,23 @@ class ProductViewController: UIViewController {
     }
     
     @IBAction func actionSave() {
-        saveProductInDB()
+        saveUserInDB()
     }
     
     @IBAction func actionBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func saveProductInDB() {
-        let product = Product(context: appDelegate.persistentContainer.viewContext)
-        product.name = nameTextField.text
-        product.price = Int16(priceTextField.text ?? "") ?? 0
-        product.setDefaultDetail()
-        product.id =  Int16.random(in: 0...1000)
+    func saveUserInDB() {
+        let user = User(context: appDelegate.persistentContainer.viewContext)
+        user.firstName = firstNameTextField.text
+        user.lastName = lastNameTextField.text
+        user.age = Int16(priceTextField.text ?? "") ?? 0
+        user.setDefaultDetail()
+        user.id =  Int16.random(in: 0...1000)
         do {
             try appDelegate.persistentContainer.viewContext.save()
-            print("Product saved in Database.")
+            print("User saved in Database.")
             self.navigationController?.popViewController(animated: true)
         } catch let error {
             print(error.localizedDescription)
