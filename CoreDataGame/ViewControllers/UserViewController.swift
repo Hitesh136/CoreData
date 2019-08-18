@@ -31,7 +31,7 @@ class UserViewController: UIViewController {
         let user = User(context: appDelegate.persistentContainer.viewContext)
         user.firstName = firstNameTextField.text
         user.lastName = lastNameTextField.text
-        user.age = Int16(priceTextField.text ?? "") ?? 0
+//        user.age = Int16(priceTextField.text ?? "") ?? 0
         user.setDefaultDetail()
         user.id =  Int16.random(in: 0...1000)
         do {
