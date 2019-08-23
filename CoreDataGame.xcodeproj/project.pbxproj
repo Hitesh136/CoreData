@@ -16,7 +16,7 @@
 		4A4FA3E222EAD98A000CD918 /* CoreDataGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3E122EAD98A000CD918 /* CoreDataGameTests.swift */; };
 		4A4FA3ED22EAD98A000CD918 /* CoreDataGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3EC22EAD98A000CD918 /* CoreDataGameUITests.swift */; };
 		4A4FA3FB22EADC34000CD918 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FA22EADC34000CD918 /* UserTableViewCell.swift */; };
-		4A4FA3FD22EADF56000CD918 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FC22EADF56000CD918 /* UserViewController.swift */; };
+		4A4FA3FD22EADF56000CD918 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FC22EADF56000CD918 /* AddUserViewController.swift */; };
 		4A4FA3FF22EAE0FE000CD918 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4FA3FE22EAE0FE000CD918 /* Constants.swift */; };
 		4AC103A922EB08060005C829 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC103A822EB08060005C829 /* DetailViewController.swift */; };
 		4AC103AD22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC103AC22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift */; };
@@ -62,7 +62,7 @@
 		4A4FA3EC22EAD98A000CD918 /* CoreDataGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataGameUITests.swift; sourceTree = "<group>"; };
 		4A4FA3EE22EAD98A000CD918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A4FA3FA22EADC34000CD918 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		4A4FA3FC22EADF56000CD918 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		4A4FA3FC22EADF56000CD918 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		4A4FA3FE22EAE0FE000CD918 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4AC103A822EB08060005C829 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4AC103AC22EB0A270005C829 /* SingleTextFieldTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTextFieldTableVIewCell.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			children = (
 				4AC103A822EB08060005C829 /* DetailViewController.swift */,
 				4A4FA3CB22EAD988000CD918 /* ViewController.swift */,
-				4A4FA3FC22EADF56000CD918 /* UserViewController.swift */,
+				4A4FA3FC22EADF56000CD918 /* AddUserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -447,7 +447,7 @@
 				4A4FA3CC22EAD988000CD918 /* ViewController.swift in Sources */,
 				4A4FA3D222EAD988000CD918 /* CoreDataGame.xcdatamodeld in Sources */,
 				4A4FA3CA22EAD988000CD918 /* AppDelegate.swift in Sources */,
-				4A4FA3FD22EADF56000CD918 /* UserViewController.swift in Sources */,
+				4A4FA3FD22EADF56000CD918 /* AddUserViewController.swift in Sources */,
 				4AC103A922EB08060005C829 /* DetailViewController.swift in Sources */,
 				9D9DEB5223099C3A0091595B /* User+CoreDataClass.swift in Sources */,
 				9D9DEB5123099C3A0091595B /* User+CoreDataProperties.swift in Sources */,

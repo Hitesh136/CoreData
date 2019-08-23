@@ -4,8 +4,9 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="20" usesScalarValueType="YES"/>
+        <attribute name="age" optional="YES" attributeType="Integer 16" minValueString="20" maxValueString="35" defaultValueString="25" usesScalarValueType="YES"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="String" defaultValueString="Male"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" transient="YES" attributeType="String"/>
@@ -13,6 +14,6 @@
     </entity>
     <elements>
         <element name="Detail" positionX="-63" positionY="0" width="128" height="60"/>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>

@@ -26,7 +26,6 @@ class SingleTextFieldTableVIewCell: UITableViewCell {
         textField.text = data
         self.index = index
     }
-
 }
 
 extension SingleTextFieldTableVIewCell: UITextFieldDelegate {

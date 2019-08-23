@@ -46,12 +46,15 @@ class DetailViewController: UIViewController {
     }
     
     func fetchFields() {
-        
+        guard let userId = userId else {
+            navigationController?.popViewController(animated: true)
+            return
+        }
         let fetchrequest: NSFetchRequest<User> = NSFetchRequest(entityName: "User")
         let predicate = NSPredicate(format: "id == \(userId)")
         fetchrequest.predicate = predicate
         
-        let sortDescripter = NSSortDescriptor(key: "price", ascending: true)
+        let sortDescripter = NSSortDescriptor(key: "age", ascending: true)
         fetchrequest.sortDescriptors = [sortDescripter]
         do {
             if let user = try tempContext?.fetch(fetchrequest).first, let detailSet = user.detail, let fieldArr = Array(detailSet) as? [Detail] {

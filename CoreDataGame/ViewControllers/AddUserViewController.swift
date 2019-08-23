@@ -9,14 +9,16 @@
 import UIKit
 import CoreData
 
-class UserViewController: UIViewController {
+class AddUserViewController: UIViewController {
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firstNameTextField.becomeFirstResponder()
     }
     
     @IBAction func actionSave() {
@@ -31,7 +33,13 @@ class UserViewController: UIViewController {
         let user = User(context: appDelegate.persistentContainer.viewContext)
         user.firstName = firstNameTextField.text
         user.lastName = lastNameTextField.text
-//        user.age = Int16(priceTextField.text ?? "") ?? 0
+        if let age = ageTextField.text, !age.isEmpty {
+            user.age = Int16(age) ?? 0
+        }
+        
+        if let gender = genderTextField.text, !gender.isEmpty {
+            user.gender = gender
+        }
         user.setDefaultDetail()
         user.id =  Int16.random(in: 0...1000)
         do {

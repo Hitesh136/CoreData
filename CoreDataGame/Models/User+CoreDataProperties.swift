@@ -20,6 +20,8 @@ extension User {
     @NSManaged public var firstName: String?
     @NSManaged public var id: Int16
     @NSManaged public var lastName: String?
+    @NSManaged public var gender: String?
+    
     var name: String? {
         var name = ""
         if let firstName = firstName {

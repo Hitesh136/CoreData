@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actionAdd() {
-        if let userViewController = storyboard?.instantiateViewController(withIdentifier: "UserViewController") as? UserViewController {
+        if let userViewController = storyboard?.instantiateViewController(withIdentifier: "AddUserViewController") as? AddUserViewController {
             self.navigationController?.pushViewController(userViewController, animated: true)
         }
     }

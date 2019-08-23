@@ -13,6 +13,7 @@ class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +24,6 @@ class UserTableViewCell: UITableViewCell {
         fullNameLabel.text = user.name
         
         priceLabel.text = String(user.age)
+        genderLabel.text = user.gender
     } 
 }
